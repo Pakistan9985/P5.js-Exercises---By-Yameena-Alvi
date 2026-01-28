@@ -1,0 +1,25 @@
+let bgColor = 220;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+
+  background(bgColor);
+
+  let dynamicSize = map(mouseX, 0, width, 20, 150);
+  circle(mouseX, mouseY, dynamicSize);
+
+
+  fill(0);
+  noStroke();
+  text("Move mouse to move & resize circle", 20, 20);
+  text("Press 'C' to change background color", 20, 40);
+}
+
+function keyPressed() {
+  if (key === 'c' || key === 'C') {
+    bgColor = random(255);
+  }
+}
