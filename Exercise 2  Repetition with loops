@@ -1,0 +1,29 @@
+
+function draw() {
+  background(245);
+  
+  fill(100, 180, 255);
+  noStroke();
+  
+  let circleSpacing = 45; 
+  for (let i = 0; i < 12; i++) {
+    
+    let xPos = 50 + (i * circleSpacing);
+    circle(xPos, 100, 30);
+  }
+
+  stroke(255, 100, 100);
+  strokeWeight(3);
+  
+  let lineSpacing = 20;
+  for (let j = 0; j < 25; j++) {
+  
+    let xPos = 50 + (j * lineSpacing);
+    line(xPos, 200, xPos, 300);
+  }
+  
+  noStroke();
+  fill(50);
+  text("Pattern 1: Circles with wide spacing", 50, 70);
+  text("Pattern 2: Lines with tight spacing (Extension)", 50, 180);
+}
