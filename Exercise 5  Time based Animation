@@ -1,0 +1,11 @@
+function draw() {
+  background(20);
+  
+  let pulse = sin(frameCount * 0.05) * 50;
+  let size = 100 + pulse;
+  
+  fill(100, 200, frameCount % 255);
+  noStroke();
+
+  ellipse(width/2, height/2, size, size);
+}
