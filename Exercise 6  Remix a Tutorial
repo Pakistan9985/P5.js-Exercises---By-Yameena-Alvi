@@ -1,0 +1,25 @@
+let x, y, xSpeed, ySpeed;
+
+function setup() {
+  createCanvas(400, 400);
+  x = width / 2;
+  y = height / 2;
+  xSpeed = 5;
+  ySpeed = 3;
+  background(0);
+}
+
+function draw() {
+  
+  background(0, 20); 
+  
+  x += xSpeed;
+  y += ySpeed;
+
+  if (x > width || x < 0) xSpeed *= -1;
+  if (y > height || y < 0) ySpeed *= -1;
+
+  fill(mouseX / 2, 255, mouseY / 2);
+  noStroke();
+  ellipse(x, y, 30, 30);
+}
