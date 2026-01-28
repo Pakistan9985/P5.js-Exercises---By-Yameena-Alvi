@@ -1,0 +1,21 @@
+let circleSize = 100;
+let rectWidth = 150;
+let rectHeight = 80;
+let lineLength = 200;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+
+  fill(100, 150, 255);
+  circle(100, 100, circleSize);
+
+  fill(255, 100, 100);
+  rect(200, 50, rectWidth, rectHeight);
+
+  strokeWeight(4);
+  line(50, 300, 50 + lineLength, 300);
+}
